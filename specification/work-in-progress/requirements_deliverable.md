@@ -1,5 +1,8 @@
 # Software Requirements Specification for PPALMS System #
 
+## Use Case Diagram ##
+![PPLAMS Use Case Diagram](imgs/ppalms_use_case_diagram.png)
+
 ## Use Cases ##
 
 **Use Case ID:** U001 \

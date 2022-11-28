@@ -7,14 +7,10 @@ public class SystemMediator implements Mediator {
   private AbstractQuizExporter qzExport;
 
   public SystemMediator() {
-    this.pHandler = new RandomGrabProbDatabaseHandler();
-    this.sHandler = new RandomSourceCodeHandler();
-    this.qzGen = new QuizGenerator();
-    this.qzExport = new QuizExporterToQuizDirectory();
-    this.pHandler.init(this);
-    this.sHandler.init(this);
-    this.qzGen.init(this);
-    this.qzExport.init(this);
+    this.pHandler = new RandomGrabProbDatabaseHandler(this);
+    this.sHandler = new RandomSourceCodeHandler(this);
+    this.qzGen = new QuizGenerator(this);
+    this.qzExport = new QuizExporterToQuizDirectory(this);
   }
 
   public void notify(Component sender, String event) {
@@ -64,7 +60,7 @@ public class SystemMediator implements Mediator {
     }
 
     if(event.equals("GenOrderProb")) {
-      //TODO
+      // ConcreteProblemFactory.createOrderProblem(this.sHandler.ingestNewSC(".py"));
     return;
     }
 

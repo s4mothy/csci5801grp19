@@ -3,13 +3,13 @@ package csci5801grp19;
 
 public abstract class AbstractProblemDatabaseHandler extends Component {
 
-  private AbstractProblem currProb;
+  private Problem currProb;
 
-  public AbstractProblem getCurrProb () {
+  public Problem getCurrProb () {
     return currProb;
   }
 
-  public void storeProbInDB(AbstractProblem newProb) {
+  public void storeProbInDB(Problem newProb) {
     
   }
   

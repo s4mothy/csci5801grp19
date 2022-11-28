@@ -2,7 +2,7 @@ package csci5801grp19;
 import java.util.*;
 
 public class Quiz {
-  private List<AbstractProblem> questions;
+  private List<Problem> questions;
   private String quizInfo;
 
   public Quiz(String quizInfo) {
@@ -10,7 +10,7 @@ public class Quiz {
     this.quizInfo = quizInfo;
   }
 
-  public List<AbstractProblem> getQuestions() {
+  public List<Problem> getQuestions() {
     return questions;
   }
 

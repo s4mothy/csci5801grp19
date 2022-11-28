@@ -2,6 +2,7 @@ package csci5801grp19;
 import java.io.*;
 
 public abstract class AbstractSourceCodeHandler extends Component{
+
   private File srcCode;
 
   public AbstractSourceCodeHandler(Mediator dialog) {
@@ -12,7 +13,6 @@ public abstract class AbstractSourceCodeHandler extends Component{
     return srcCode;
   }
 
-  // TBD, currently just says there is an infinite amount of source code available
   public int checkSrcCodeQt(String ext) {
     File srcFolder = new File("../../resources/source_code/");
 
@@ -27,6 +27,5 @@ public abstract class AbstractSourceCodeHandler extends Component{
   }
 
   public abstract File ingestNewSC(String ext);
-
 
 }

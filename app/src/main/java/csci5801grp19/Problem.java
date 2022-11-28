@@ -11,14 +11,14 @@ public abstract class Problem {
 
     int getLanguage(String s){
 
-        // pyton
+        // python
         if(s.equals(".py")){
             this.language = 1;
             return 0;
         }
 
         // java
-        else if(s.equals("py")){
+        else if(s.equals(".java")){
             this.language = 2;
             return 0;
         }

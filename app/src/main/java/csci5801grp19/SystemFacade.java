@@ -61,6 +61,7 @@ public final class SystemFacade {
       e.printStackTrace();
       return 1;
     }
+
   }
 
   private int readSpecs(Scanner s) {
@@ -118,7 +119,7 @@ public final class SystemFacade {
 
   // makes sure specified problem type is supported
   private boolean checkType(String type) {
-    if(type.equals("matching")){
+    if(type.equals("ordering")){
       return true;
     }
     else if(type.equals("multiple choice")){
@@ -147,4 +148,5 @@ public final class SystemFacade {
     System.out.println("unsupported language");
     return false;
   }
-};
+
+}

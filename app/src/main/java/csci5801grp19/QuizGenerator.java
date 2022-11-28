@@ -23,7 +23,7 @@ public class QuizGenerator extends Component {
     this.dialog.notify(this, "ChkSrcCode");
 
 
-
+    
     return getQuiz();
   }
 

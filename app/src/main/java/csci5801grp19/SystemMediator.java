@@ -65,16 +65,16 @@ public class SystemMediator implements Mediator {
     }
 
     if(event.equals("GenMCProb")) {
-      AbstractProblem newOrderingProb = ProblemFactory.createProblem("MultipleChoice",
+      AbstractProblem newMultChcProb = ProblemFactory.createProblem("MultipleChoice",
             this.sHandler.ingestNewSC(".py"));
-      // qzGen.getQuiz().getQuestions().add(newOrderingProb);
+      qzGen.getQuiz().getQuestions().add(newMultChcProb);
     return;
     }
 
     if(event.equals("GenOrderProb")) {
       AbstractProblem newOrderingProb = ProblemFactory.createProblem("Ordering",
             this.sHandler.ingestNewSC(".py"));
-      // qzGen.getQuiz().getQuestions().add(newOrderingProb);
+      qzGen.getQuiz().getQuestions().add(newOrderingProb);
     return;
     }
 

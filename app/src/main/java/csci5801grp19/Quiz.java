@@ -2,7 +2,8 @@ package csci5801grp19;
 import java.util.*;
 
 public class Quiz {
-  private List<Problem> questions;
+  
+  private List<AbstractProblem> questions;
   private String quizInfo;
 
   public Quiz(String quizInfo) {
@@ -10,11 +11,12 @@ public class Quiz {
     this.quizInfo = quizInfo;
   }
 
-  public List<Problem> getQuestions() {
+  public List<AbstractProblem> getQuestions() {
     return questions;
   }
 
   public String getQuizInfo() {
     return quizInfo;
   }
+
 }

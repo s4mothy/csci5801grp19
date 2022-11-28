@@ -33,7 +33,7 @@ public abstract class AbstractProblemDatabaseHandler extends Component {
       out.writeObject(newProb);
       out.close();
       fileOut.close();
-      System.out.printf(String.format("Problem File Saved At %s.", newFileName));
+      System.out.println(String.format("Problem File Saved At %s.", newFileName));
     } catch (IOException i) {
       i.printStackTrace();
     }

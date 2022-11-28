@@ -34,7 +34,7 @@ public class QuizGenerator extends Component {
       }
     }
 
-    this.dialog.notify(this, "exportQuiz");
+    this.dialog.notify(this, "ExportQuiz");
 
     return getQuiz();
   }

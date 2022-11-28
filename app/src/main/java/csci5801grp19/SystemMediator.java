@@ -11,10 +11,10 @@ public class SystemMediator implements Mediator {
     this.sHandler = new RandomSourceCodeHandler();
     this.qzGen = new QuizGenerator();
     this.qzExport = new QuizExporterToQuizDirectory();
-    this.pHandler.init(this);
-    this.sHandler.init(this);
-    this.qzGen.init(this);
-    this.qzExport.init(this);
+    // this.pHandler.init(this);
+    // this.sHandler.init(this);
+    // this.qzGen.init(this);
+    // this.qzExport.init(this);
   }
 
   public void notify(Component sender, String event) {

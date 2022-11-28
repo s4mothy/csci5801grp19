@@ -1,4 +1,4 @@
 3,50,Friday Midterm
-ordering,.py
-ordering,.py
-ordering,.py
+multiple choice,.py
+multiple choice,.c
+matching,.java

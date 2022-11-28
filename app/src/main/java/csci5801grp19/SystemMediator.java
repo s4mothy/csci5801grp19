@@ -1,4 +1,5 @@
 package csci5801grp19;
+import java.util.*;
 
 public class SystemMediator implements Mediator {
   private AbstractProblemDatabaseHandler pHandler;
@@ -35,7 +36,7 @@ public class SystemMediator implements Mediator {
   public void reactOnPHandler(String event) {
     if(event.equals("AddToQuiz")) {
       // TBD
-    return;
+      return;
     }
   }
 
@@ -46,41 +47,50 @@ public class SystemMediator implements Mediator {
   public void reactOnQZGen(String event) {
     if(event.equals("ChkSrcCode")) {
       // TBD
-    return;
+      return;
     }
     
     if(event.equals("ChkProbDB")) {
       // TBD
-    return;
+      return;
     }
 
     if(event.equals("PullMCProb")) {
       // TBD
-    return;
+      return;
     }
 
     if(event.equals("PullOrderProb")) {
       // TBD
-    return;
+      return;
     }
 
     if(event.equals("GenMCProb")) {
-      AbstractProblem newMultChcProb = ProblemFactory.createProblem("MultipleChoice",
+      AbstractProblem newMultChcProb = ProblemFactory.createProblem("multiple choice",
             this.sHandler.ingestNewSC(".py"));
       qzGen.getQuiz().getQuestions().add(newMultChcProb);
-    return;
+      pHandler.storeProbInDB(newMultChcProb);
+      return;
     }
 
     if(event.equals("GenOrderProb")) {
-      AbstractProblem newOrderingProb = ProblemFactory.createProblem("Ordering",
+      AbstractProblem newOrderingProb = ProblemFactory.createProblem("ordering",
             this.sHandler.ingestNewSC(".py"));
+      System.out.println(qzGen.getQuiz().getQuestions());
       qzGen.getQuiz().getQuestions().add(newOrderingProb);
-    return;
+      pHandler.storeProbInDB(newOrderingProb);
+      return;
+    }
+
+    if(event.equals("GenerateQuiz")) {
+      qzGen.generateQuiz();
+      return;
     }
 
     if(event.equals("ExportQuiz")) {
-      // TBD
-    return;
+      // TEMPORARY USE AS MEANS TO PRINT PROBLEMS
+      System.out.println(qzGen.getQuiz());
+      return;
     }
   }
 

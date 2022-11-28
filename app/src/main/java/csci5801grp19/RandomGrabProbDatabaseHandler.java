@@ -21,7 +21,7 @@ public class RandomGrabProbDatabaseHandler extends AbstractProblemDatabaseHandle
       ptVal = "T02";
     }
     
-    File prbFolder = new File ("../../resources/stored_probs/");
+    File prbFolder = new File ("src\\main\\resources\\stored_probs\\");
     final String tmp = ptVal;
     FilenameFilter filter = new FilenameFilter() {
       public boolean accept (File f, String nm) {
@@ -33,7 +33,7 @@ public class RandomGrabProbDatabaseHandler extends AbstractProblemDatabaseHandle
     String randFileName = prbFolder.list(filter)[rand.nextInt(numFiles)];
     
     try {
-      FileInputStream fileIn = new FileInputStream("../../resources/stored_probs/" + randFileName);
+      FileInputStream fileIn = new FileInputStream("src\\main\\resources\\stored_probs\\" + randFileName);
       ObjectInputStream in = new ObjectInputStream(fileIn);
       if (type.equals("multiple choice")) {
         prb = (MultChcProblem) in.readObject();

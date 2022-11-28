@@ -3,9 +3,9 @@ import java.io.*;
 
 public abstract class AbstractProblem implements Serializable {
 
-  private String question;
-  private String options;
-  private String solution;
+  protected String question;
+  protected String options;
+  protected String solution;
 
   public String getQuestion() {
     return this.question;
@@ -17,6 +17,17 @@ public abstract class AbstractProblem implements Serializable {
 
   public String getSolution() {
     return this.solution;
+  }
+
+  public String toString() {
+    String str = question;
+    str += '\n';
+    str += options;
+    str += '\n';
+    str += solution;
+    str += '\n';
+
+    return str;
   }
   
 }

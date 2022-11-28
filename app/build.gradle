@@ -26,7 +26,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'csci5801grp19.PPALMS_System'
+    mainClass = 'csci5801grp19.Main'
 }
 
 tasks.named('test') {

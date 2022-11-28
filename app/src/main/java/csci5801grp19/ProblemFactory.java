@@ -4,10 +4,10 @@ import java.io.*;
 public class ProblemFactory {
 
   public static AbstractProblem createProblem(String pType, File sc) {
-    if (pType.equals("Ordering")) {
+    if (pType.equals("ordering")) {
       return new OrderingProblem(sc);
     }
-    if (pType.equals("MultipleChoice")) {
+    if (pType.equals("multiple choice")) {
       return new MultChcProblem(sc);
     }
     return null;

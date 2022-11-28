@@ -24,7 +24,7 @@ public abstract class AbstractProblemDatabaseHandler extends Component {
     String newFileName = genFileName(newProb);
     try { 
       FileOutputStream fileOut =
-      new FileOutputStream("../../resources/stored_probs/" + newFileName);
+      new FileOutputStream("src\\main\\resources\\stored_probs\\" + newFileName);
       ObjectOutputStream out = new ObjectOutputStream(fileOut);
       out.writeObject(newProb);
       out.close();
@@ -45,7 +45,7 @@ public abstract class AbstractProblemDatabaseHandler extends Component {
       ptVal = "T02";
     }
     
-    File prbFolder = new File ("../../resources/stored_probs/");
+    File prbFolder = new File ("src\\main\\resources\\stored_probs\\");
     final String tmp = ptVal;
     FilenameFilter filter = new FilenameFilter() {
       public boolean accept (File f, String nm) {
@@ -71,7 +71,7 @@ public abstract class AbstractProblemDatabaseHandler extends Component {
       ptVal = "T02";
     }
     
-    File prbFolder = new File ("../../resources/stored_probs/");
+    File prbFolder = new File ("src\\main\\resources\\stored_probs\\");
     final String tmp = ptVal;
     FilenameFilter filter = new FilenameFilter() {
       public boolean accept (File f, String nm) {

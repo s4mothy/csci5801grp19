@@ -24,5 +24,12 @@ public class Main {
             System.out.println(SystemFacade.quiz_template[i][1]);
             
         }
+
+        SystemMediator newMed = new SystemMediator();
+
+        System.out.println("Generating quizzes...");
+        for (int i=0; i<SystemFacade.num_quizzes; i++) {
+          newMed.reactOnQZGen("GenerateQuiz");;
+        }
     }
 }

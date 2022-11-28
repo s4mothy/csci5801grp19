@@ -14,7 +14,7 @@ public abstract class AbstractSourceCodeHandler extends Component{
   }
 
   public int checkSrcCodeQt(String ext) {
-    File srcFolder = new File("../../resources/source_code/");
+    File srcFolder = new File("src\\main\\resources\\source_code\\");
 
     FilenameFilter filter = new FilenameFilter() {
       public boolean accept (File f, String nm) {

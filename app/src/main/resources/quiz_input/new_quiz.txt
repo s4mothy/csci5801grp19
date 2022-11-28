@@ -1,0 +1,7 @@
+BEGIN_QUIZ_DOCUMENT
+TITLE {Monday Quiz for Python Course}
+PREAMBLE {Welcome to the quiz! Follow instructions below. Quiz ends at 5pm. Good luck!}
+NUM_ORDER_QS {4}
+SRC_CD_LANG {PYTHON}
+FOOTNOTE {The quiz is over, drop off up front and have a great weekend!}
+END_QUIZ_DOCUMENT

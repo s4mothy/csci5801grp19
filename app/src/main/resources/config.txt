@@ -1,0 +1,4 @@
+directExportToLMS=false
+problemDataBaseHandlerType=RandomGrab
+sourceCodeHandlerType=Random
+percentProblemReuse=0.25

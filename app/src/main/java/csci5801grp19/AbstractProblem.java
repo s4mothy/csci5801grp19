@@ -1,4 +1,5 @@
 package csci5801grp19;
+
 import java.io.*;
 
 public abstract class AbstractProblem implements Serializable {
@@ -6,6 +7,7 @@ public abstract class AbstractProblem implements Serializable {
   protected String question;
   protected String options;
   protected String solution;
+  protected String langEx;
 
   public String getQuestion() {
     return this.question;
@@ -19,6 +21,10 @@ public abstract class AbstractProblem implements Serializable {
     return this.solution;
   }
 
+  public String getLangEx() {
+    return this.langEx;
+  }
+
   public String toString() {
     String str = question;
     str += '\n';
@@ -29,5 +35,5 @@ public abstract class AbstractProblem implements Serializable {
 
     return str;
   }
-  
+
 }

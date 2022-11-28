@@ -1,4 +1,5 @@
 package csci5801grp19;
+
 import java.io.*;
 import java.util.Random;
 
@@ -19,24 +20,22 @@ public class QuizGenerator extends Component {
   Quiz generateQuiz() {
 
     currQuiz = new Quiz(SystemFacade.title);
-    
+
     this.dialog.notify(this, "ChkSrcCode");
     this.dialog.notify(this, "ChkProbDB");
 
-    for(int i=0; i<(SystemFacade.quiz_template.length); i++) {
+    for (int i = 0; i < (SystemFacade.quiz_template.length); i++) {
       String currType = SystemFacade.quiz_template[i][0];
-      if(currType.equals("multiple choice")) {
+      if (currType.equals("multiple choice")) {
         this.dialog.notify(this, "GenMCProb");
       }
-      if(currType.equals("ordering")) {
+      if (currType.equals("ordering")) {
         this.dialog.notify(this, "GenOrderProb");
       }
     }
 
     this.dialog.notify(this, "exportQuiz");
 
-
-    
     return getQuiz();
   }
 

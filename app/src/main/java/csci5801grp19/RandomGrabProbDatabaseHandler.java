@@ -1,15 +1,18 @@
 package csci5801grp19;
+
 import java.io.*;
 import java.util.Random;
 
 public class RandomGrabProbDatabaseHandler extends AbstractProblemDatabaseHandler {
 
-  public RandomGrabProbDatabaseHandler (Mediator dialog) {
+  private String STORED_PROB_PATH = "src\\main\\resources\\stored_probs\\";
+
+  public RandomGrabProbDatabaseHandler(Mediator dialog) {
     super(dialog);
   }
 
-  public AbstractProblem getProbFromDB (String type) {
-    
+  public AbstractProblem getProbFromDB(String type) {
+
     AbstractProblem prb = null;
     Random rand = new Random();
 
@@ -20,20 +23,20 @@ public class RandomGrabProbDatabaseHandler extends AbstractProblemDatabaseHandle
     if (type.equals("ordering")) {
       ptVal = "T02";
     }
-    
-    File prbFolder = new File ("src\\main\\resources\\stored_probs\\");
+
+    File prbFolder = new File(STORED_PROB_PATH);
     final String tmp = ptVal;
     FilenameFilter filter = new FilenameFilter() {
-      public boolean accept (File f, String nm) {
+      public boolean accept(File f, String nm) {
         return nm.endsWith(tmp);
       }
     };
 
     int numFiles = prbFolder.list(filter).length;
     String randFileName = prbFolder.list(filter)[rand.nextInt(numFiles)];
-    
+
     try {
-      FileInputStream fileIn = new FileInputStream("src\\main\\resources\\stored_probs\\" + randFileName);
+      FileInputStream fileIn = new FileInputStream(STORED_PROB_PATH + randFileName);
       ObjectInputStream in = new ObjectInputStream(fileIn);
       if (type.equals("multiple choice")) {
         prb = (MultChcProblem) in.readObject();
@@ -41,7 +44,7 @@ public class RandomGrabProbDatabaseHandler extends AbstractProblemDatabaseHandle
       if (type.equals("ordering")) {
         prb = (OrderingProblem) in.readObject();
       }
-      
+
       in.close();
       fileIn.close();
     } catch (IOException i) {
@@ -52,7 +55,7 @@ public class RandomGrabProbDatabaseHandler extends AbstractProblemDatabaseHandle
       c.printStackTrace();
       return null;
     }
-    
+
     return prb;
 
   }

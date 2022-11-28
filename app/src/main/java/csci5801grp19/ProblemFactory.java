@@ -1,7 +1,14 @@
 package csci5801grp19;
+
 import java.io.*;
 
 public class ProblemFactory {
+
+  /**
+   * Private constructor to prevent instants.
+   */
+  private ProblemFactory() {
+  };
 
   public static AbstractProblem createProblem(String pType, File sc) {
     if (pType.equals("ordering")) {
@@ -12,5 +19,5 @@ public class ProblemFactory {
     }
     return null;
   }
-  
+
 }

@@ -9,5 +9,5 @@ public class QuizExporterToQuizDirectory extends AbstractQuizExporter {
   public boolean exportQuiz(Quiz currQuiz) {
     return false; // not yet implemented
   }
-  
+
 }

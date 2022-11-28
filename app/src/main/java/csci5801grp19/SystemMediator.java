@@ -1,4 +1,5 @@
 package csci5801grp19;
+
 import java.util.*;
 
 public class SystemMediator implements Mediator {
@@ -15,26 +16,26 @@ public class SystemMediator implements Mediator {
   }
 
   public void notify(Component sender, String event) {
-    if(sender instanceof AbstractProblemDatabaseHandler) {
+    if (sender instanceof AbstractProblemDatabaseHandler) {
       reactOnPHandler(event);
       return;
     }
-    if(sender instanceof AbstractSourceCodeHandler) {
+    if (sender instanceof AbstractSourceCodeHandler) {
       reactOnSHandler(event);
       return;
     }
-    if(sender instanceof QuizGenerator) {
+    if (sender instanceof QuizGenerator) {
       reactOnQZGen(event);
       return;
     }
-    if(sender instanceof AbstractQuizExporter) {
+    if (sender instanceof AbstractQuizExporter) {
       reactOnQZExport(event);
       return;
     }
   }
 
   public void reactOnPHandler(String event) {
-    if(event.equals("AddToQuiz")) {
+    if (event.equals("AddToQuiz")) {
       // TBD
       return;
     }
@@ -45,49 +46,48 @@ public class SystemMediator implements Mediator {
   }
 
   public void reactOnQZGen(String event) {
-    if(event.equals("ChkSrcCode")) {
-      // TBD
-      return;
-    }
-    
-    if(event.equals("ChkProbDB")) {
+    if (event.equals("ChkSrcCode")) {
       // TBD
       return;
     }
 
-    if(event.equals("PullMCProb")) {
+    if (event.equals("ChkProbDB")) {
       // TBD
       return;
     }
 
-    if(event.equals("PullOrderProb")) {
+    if (event.equals("PullMCProb")) {
       // TBD
       return;
     }
 
-    if(event.equals("GenMCProb")) {
+    if (event.equals("PullOrderProb")) {
+      // TBD
+      return;
+    }
+
+    if (event.equals("GenMCProb")) {
       AbstractProblem newMultChcProb = ProblemFactory.createProblem("multiple choice",
-            this.sHandler.ingestNewSC(".py"));
+          this.sHandler.ingestNewSC(".py"));
       qzGen.getQuiz().getQuestions().add(newMultChcProb);
       pHandler.storeProbInDB(newMultChcProb);
       return;
     }
 
-    if(event.equals("GenOrderProb")) {
+    if (event.equals("GenOrderProb")) {
       AbstractProblem newOrderingProb = ProblemFactory.createProblem("ordering",
-            this.sHandler.ingestNewSC(".py"));
-      System.out.println(qzGen.getQuiz().getQuestions());
+          this.sHandler.ingestNewSC(".py"));
       qzGen.getQuiz().getQuestions().add(newOrderingProb);
       pHandler.storeProbInDB(newOrderingProb);
       return;
     }
 
-    if(event.equals("GenerateQuiz")) {
+    if (event.equals("GenerateQuiz")) {
       qzGen.generateQuiz();
       return;
     }
 
-    if(event.equals("ExportQuiz")) {
+    if (event.equals("ExportQuiz")) {
       // TEMPORARY USE AS MEANS TO PRINT PROBLEMS
       System.out.println(qzGen.getQuiz());
       return;

@@ -1,9 +1,8 @@
 package csci5801grp19;
 
 import java.util.Scanner;
-import java.io.File; 
+import java.io.File;
 import java.io.FileNotFoundException;
-
 
 // singleton class used to parse information from input file
 public final class SystemFacade {
@@ -21,7 +20,8 @@ public final class SystemFacade {
   public static String[][] quiz_template;
 
   // constructor (should only be used once, as a signleton class)
-  private SystemFacade() {}
+  private SystemFacade() {
+  }
 
   // thread safe singleton referencing https://www.youtube.com/watch?v=vSxKnvxe8v0
   public static SystemFacade getInstance() {
@@ -39,7 +39,7 @@ public final class SystemFacade {
   // primary method
   public int getInput() {
 
-    // recieve path to specifications 
+    // recieve path to specifications
     Scanner inputReader = new Scanner(System.in);
     System.out.println("Enter path to specification document: ");
     String input = inputReader.nextLine();
@@ -106,7 +106,7 @@ public final class SystemFacade {
       String extension = tokens[1];
 
       // language/problem is supported
-      if(!checkType(type) || !checkExtension(extension)){
+      if (!checkType(type) || !checkExtension(extension)) {
         return 2;
       }
       quiz_template[i][0] = tokens[0];
@@ -119,10 +119,9 @@ public final class SystemFacade {
 
   // makes sure specified problem type is supported
   private boolean checkType(String type) {
-    if(type.equals("ordering")){
+    if (type.equals("ordering")) {
       return true;
-    }
-    else if(type.equals("multiple choice")){
+    } else if (type.equals("multiple choice")) {
       return true;
     }
 
@@ -132,16 +131,13 @@ public final class SystemFacade {
 
   // makes sure specified language is supported
   private boolean checkExtension(String extension) {
-    if(extension.equals(".py")){
+    if (extension.equals(".py")) {
       return true;
-    }
-    else if(extension.equals(".c")){
+    } else if (extension.equals(".c")) {
       return true;
-    }
-    else if(extension.equals(".java")){
+    } else if (extension.equals(".java")) {
       return true;
-    }
-    else if(extension.equals(".HTML")){
+    } else if (extension.equals(".HTML")) {
       return true;
     }
 

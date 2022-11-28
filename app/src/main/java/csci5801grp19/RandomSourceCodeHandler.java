@@ -1,21 +1,24 @@
 package csci5801grp19;
+
 import java.io.*;
 import java.util.Random;
 
 public class RandomSourceCodeHandler extends AbstractSourceCodeHandler {
 
-  public RandomSourceCodeHandler (Mediator dialog) {
+  private String SRC_CODE_PATH = "src\\main\\resources\\source_code\\";
+
+  public RandomSourceCodeHandler(Mediator dialog) {
     super(dialog);
   }
 
-  public File ingestNewSC(String ext) { 
+  public File ingestNewSC(String ext) {
+
     Random rand = new Random();
     File srcFolder;
 
-    srcFolder = new File("src\\main\\resources\\source_code\\");
-    System.out.println(srcFolder.list());
+    srcFolder = new File(SRC_CODE_PATH);
     FilenameFilter filter = new FilenameFilter() {
-      public boolean accept (File f, String nm) {
+      public boolean accept(File f, String nm) {
         return nm.endsWith(ext);
       }
     };
@@ -25,5 +28,5 @@ public class RandomSourceCodeHandler extends AbstractSourceCodeHandler {
     File srcCode = new File(fname);
     return srcCode;
   }
-  
+
 }

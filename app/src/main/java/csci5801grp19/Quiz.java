@@ -1,13 +1,14 @@
 package csci5801grp19;
+
 import java.util.*;
 
 public class Quiz {
-  
+
   private List<AbstractProblem> questions;
   private String quizInfo;
 
   public Quiz(String quizInfo) {
-    this.questions = new ArrayList<AbstractProblem>();
+    this.questions = new ArrayList<>();
     this.quizInfo = quizInfo;
   }
 
@@ -22,8 +23,8 @@ public class Quiz {
   public String toString() {
     String str = quizInfo;
     str += "\n";
-    for(int i=0;i<questions.size();i++) {
-      str+=questions.get(i).toString();
+    for (int i = 0; i < questions.size(); i++) {
+      str += questions.get(i).toString();
     }
     return str;
   }

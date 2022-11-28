@@ -1,11 +1,14 @@
 package csci5801grp19;
+
 import java.io.*;
 
-public abstract class AbstractSourceCodeHandler extends Component{
+public abstract class AbstractSourceCodeHandler extends Component {
+
+  private String SRC_CODE_PATH = "src\\main\\resources\\source_code\\";
 
   private File srcCode;
 
-  public AbstractSourceCodeHandler(Mediator dialog) {
+  protected AbstractSourceCodeHandler(Mediator dialog) {
     super(dialog);
   }
 
@@ -14,16 +17,15 @@ public abstract class AbstractSourceCodeHandler extends Component{
   }
 
   public int checkSrcCodeQt(String ext) {
-    File srcFolder = new File("src\\main\\resources\\source_code\\");
+    File srcFolder = new File(SRC_CODE_PATH);
 
     FilenameFilter filter = new FilenameFilter() {
-      public boolean accept (File f, String nm) {
+      public boolean accept(File f, String nm) {
         return nm.endsWith(ext);
       }
     };
 
-    int numFiles = srcFolder.list(filter).length;
-    return numFiles;
+    return srcFolder.list(filter).length;
   }
 
   public abstract File ingestNewSC(String ext);

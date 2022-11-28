@@ -1,8 +1,8 @@
 package csci5801grp19;
 
 public abstract class AbstractQuizExporter extends Component {
-  
-  public AbstractQuizExporter(Mediator dialog) {
+
+  protected AbstractQuizExporter(Mediator dialog) {
     super(dialog);
   }
 

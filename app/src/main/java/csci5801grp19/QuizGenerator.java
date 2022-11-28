@@ -19,9 +19,9 @@ public class QuizGenerator extends Component {
   }
 
   Quiz generateQuiz(String fname) {
-    quizDoc = new File(fname);
-
+    
     this.dialog.notify(this, "ChkSrcCode");
+
 
 
     return getQuiz();

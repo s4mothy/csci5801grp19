@@ -6,3 +6,6 @@ build
 
 # Ignore generated class files
 app/bin
+
+# Ignore VSCode folder
+.vscode

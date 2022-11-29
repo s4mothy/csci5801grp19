@@ -50,6 +50,8 @@ public final class SystemFacade {
     try {
       File myFile = new File(input);
       Scanner fileReader = new Scanner(myFile);
+
+      // parse the specifications
       int i = readSpecs(fileReader);
       fileReader.close();
       return i;
@@ -64,6 +66,7 @@ public final class SystemFacade {
 
   }
 
+  // read information from the file:
   private int readSpecs(Scanner s) {
 
     // check to make sure file isn't empty
@@ -72,7 +75,7 @@ public final class SystemFacade {
       return 2;
     }
 
-    // read and tokenize the first line (header)
+    // read and tokenize the header (first line)
     String[] tokens = s.nextLine().split(",");
 
     // checks header formating
@@ -100,15 +103,23 @@ public final class SystemFacade {
         System.out.println("number of questions doesn't match header.");
         return 2;
       }
-      tokens = s.nextLine().split(",");
 
+      tokens = s.nextLine().split(",");
       String type = tokens[0];
       String extension = tokens[1];
 
       // language/problem is supported
-      if (!checkType(type) || !checkExtension(extension)) {
+      if (!checkType(type)) {
+        System.out.println("unsupported type");
         return 2;
       }
+      
+      else if (!checkExtension(extension)){
+        System.out.println("unsupported language");
+        return 2;
+      }
+
+      // update quiz_template with current question's info
       quiz_template[i][0] = tokens[0];
       quiz_template[i][1] = tokens[1];
     }
@@ -121,11 +132,11 @@ public final class SystemFacade {
   private boolean checkType(String type) {
     if (type.equals("ordering")) {
       return true;
-    } else if (type.equals("multiple choice")) {
+    } 
+    else if (type.equals("multiple choice")) {
       return true;
     }
-
-    System.out.println("unsupported type");
+    // TODO: add more problem types
     return false;
   }
 
@@ -141,7 +152,7 @@ public final class SystemFacade {
       return true;
     }
 
-    System.out.println("unsupported language");
+    // TODO: add more problem types
     return false;
   }
 

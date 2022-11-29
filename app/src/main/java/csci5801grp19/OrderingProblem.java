@@ -104,8 +104,7 @@ public class OrderingProblem extends AbstractProblem {
       nofile.printStackTrace();
     }
 
-    this.question = "Below, two lines have been swapped or reordered. Pick which two need to be swapped back to make c equal 
-    to its original value. They are ordered incrementally starting at 0 (like an array index).\n" + reorder;
+    this.question = "Below, two lines have been swapped or reordered. Pick which two need to be swapped back to make c equal to its original value. They are ordered incrementally starting at 0 (like an array index).\n" + reorder;
     //print out question statement and then the problem (reorder)
      
     //create options

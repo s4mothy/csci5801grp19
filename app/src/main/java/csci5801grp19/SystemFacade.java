@@ -106,8 +106,8 @@ public final class SystemFacade {
         System.out.println("unsupported type");
         return 2;
       }
-      
-      else if (!checkExtension(extension)){
+
+      else if (!checkExtension(extension)) {
         System.out.println("unsupported language");
         return 2;
       }
@@ -125,8 +125,7 @@ public final class SystemFacade {
   private boolean checkType(String type) {
     if (type.equals("ordering")) {
       return true;
-    } 
-    else if (type.equals("multiple choice")) {
+    } else if (type.equals("multiple choice")) {
       return true;
     }
     // TODO: add more problem types

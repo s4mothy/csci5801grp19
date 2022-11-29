@@ -8,14 +8,29 @@ public abstract class AbstractSourceCodeHandler extends Component {
 
   private File srcCode;
 
+  /**
+   * Inaccessible constructor that exists to allow dialog to be
+   * passed to correctly with super.
+   * 
+   * @param dialog The mediator reference shared among Components.
+   */
   protected AbstractSourceCodeHandler(Mediator dialog) {
     super(dialog);
   }
 
+  /**
+   * Getter for the current source code stored in the source code handler.
+   * 
+   * @return Stored source code File.
+   */
   public File getSrcCode() {
     return srcCode;
   }
 
+  /**
+   * Calculates the amount of source code of a certain type exists, to verify if
+   * a requested quiz can be made.
+   */
   public int checkSrcCodeQt(String ext) {
     File srcFolder = new File(SRC_CODE_PATH);
 

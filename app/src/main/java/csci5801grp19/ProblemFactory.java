@@ -10,6 +10,14 @@ public class ProblemFactory {
   private ProblemFactory() {
   };
 
+  /**
+   * Method that generates a new problem instance based on
+   * desired problem type and given source code.
+   * 
+   * @param pType Problem type requested to be made.
+   * @param sc    Source code File that the problem is supposed to be made from.
+   * @return A new problem of the type desired created from the source code.
+   */
   public static AbstractProblem createProblem(String pType, File sc) {
     if (pType.equals("ordering")) {
       return new OrderingProblem(sc);

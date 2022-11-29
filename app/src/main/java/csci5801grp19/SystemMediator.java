@@ -8,6 +8,10 @@ public class SystemMediator implements Mediator {
   private QuizGenerator qzGen;
   private AbstractQuizExporter qzExport;
 
+  /**
+   * Constructor for SystemMediator, where each component it mediates
+   * between is instantiated.
+   */
   public SystemMediator() {
     this.pHandler = new RandomGrabProbDatabaseHandler(this);
     this.sHandler = new RandomSourceCodeHandler(this);
@@ -15,6 +19,13 @@ public class SystemMediator implements Mediator {
     this.qzExport = new QuizExporterToQuizDirectory(this);
   }
 
+  /**
+   * Functioned used by components to communicate intended outcomes
+   * they wish the mediator to handle.
+   * 
+   * @param sender The component utilizing notify to send the request.
+   * @param event  The specific details of the request from the sender.
+   */
   public void notify(Component sender, String event) {
     if (sender instanceof AbstractProblemDatabaseHandler) {
       reactOnPHandler(event);
@@ -34,6 +45,15 @@ public class SystemMediator implements Mediator {
     }
   }
 
+  /**
+   * Method defining how the mediator would handle requests coming from the
+   * problem database
+   * handler, currently considered for a transferring information to the quiz in
+   * quiz generator.
+   * 
+   * @param event The specific event being requested by the
+   *              problem database handler.
+   */
   public void reactOnPHandler(String event) {
     if (event.equals("AddToQuiz")) {
       // TBD
@@ -41,10 +61,26 @@ public class SystemMediator implements Mediator {
     }
   }
 
+  /**
+   * Method defining how the mediator would handle requests coming from the source
+   * code
+   * handler, currently just a stub, here in consideration of future usage.
+   * 
+   * @param event The specific event being requested by the source code handler.
+   */
   public void reactOnSHandler(String event) {
     // stub for future use
   }
 
+  /**
+   * Method defining how the mediator handles requests coming from the quiz
+   * generator,
+   * where most requests come from. Range from requests for database quantities,
+   * to generated problems, to requests for reused problems, to quiz generation
+   * itself.
+   * 
+   * @param event The specific event being requested by the quiz generator.
+   */
   public void reactOnQZGen(String event) {
     if (event.equals("ChkSrcCode")) {
       // TBD
@@ -94,6 +130,12 @@ public class SystemMediator implements Mediator {
     }
   }
 
+  /**
+   * Method defining how the mediator would handle requests coming from the quiz
+   * exporter, currently just a stub, here in consideration of future usage.
+   * 
+   * @param event The specific event being requested by the quiz exporter.
+   */
   public void reactOnQZExport(String event) {
     // stub for future use
   }

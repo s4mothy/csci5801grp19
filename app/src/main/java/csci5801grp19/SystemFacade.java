@@ -74,7 +74,7 @@ public final class SystemFacade {
     // checks header formating
     if (tokens == null || tokens.length != 3) {
       System.out.println("header is not formatted correctly.");
-      return 2;
+      return 3;
     }
 
     // read header
@@ -87,14 +87,14 @@ public final class SystemFacade {
     // return error if header doesn't contain numbers
     catch (final NumberFormatException e) {
       System.out.println("header must contain number the number of questions per quiz, and the number of quizzes.");
-      return 2;
+      return 4;
     }
 
     // reads each question
     for (int i = 0; i < num_questions; i++) {
       if (!s.hasNextLine()) {
         System.out.println("number of questions doesn't match header.");
-        return 2;
+        return 5;
       }
 
       tokens = s.nextLine().split(",");
@@ -104,12 +104,12 @@ public final class SystemFacade {
       // language/problem is supported
       if (!checkType(type)) {
         System.out.println("unsupported type");
-        return 2;
+        return 6;
       }
 
       else if (!checkExtension(extension)) {
         System.out.println("unsupported language");
-        return 2;
+        return 7;
       }
 
       // update quiz_template with current question's info

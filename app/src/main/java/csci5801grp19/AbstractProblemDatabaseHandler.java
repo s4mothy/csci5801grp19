@@ -39,6 +39,12 @@ public abstract class AbstractProblemDatabaseHandler extends Component {
     }
   }
 
+  /**
+   * Checks how many of a certain type of problem exist in the database.
+   * 
+   * @param type The type of problem that's being counted (e.g. multiple choice)
+   * @return number of problems of that type.
+   */
   public int checkProbDBQt(String type) {
     String ptVal = "T00";
     if (type.equals("multiple choice")) {
@@ -62,6 +68,15 @@ public abstract class AbstractProblemDatabaseHandler extends Component {
 
   public abstract AbstractProblem getProbFromDB(String type);
 
+  /**
+   * Generates a unique file name for new problems to be stored
+   * in the database under.
+   * 
+   * @param prob The abstract problem being stored in the database
+   *             that the name is being generated for.
+   * @return String containing the unique file name for the new
+   *         AbstractProblem being added.
+   */
   private String genFileName(AbstractProblem prob) {
     String ptVal = "T00";
     if (prob instanceof MultChcProblem) {

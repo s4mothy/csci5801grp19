@@ -9,14 +9,30 @@ public class QuizGenerator extends Component {
   private boolean canUseSavedProbs;
   private double DATABASE_ODDS = 0.1;
 
+  /**
+   * Constructor for the component that generates quizzes.
+   * 
+   * @param dialog The quiz generators access to a mediator
+   *               to communicate with other components.
+   */
   public QuizGenerator(Mediator dialog) {
     super(dialog);
   }
 
+  /**
+   * Getter for getting the currently stored quiz.
+   */
   public Quiz getQuiz() {
     return currQuiz;
   }
 
+  /**
+   * Heavily utilizes the system mediator to faciliate problem generation
+   * and populate the quiz stored within this class, before eventually
+   * exporting the quiz to a file.
+   * 
+   * @return The Quiz being generated.
+   */
   Quiz generateQuiz() {
 
     currQuiz = new Quiz(SystemFacade.title);

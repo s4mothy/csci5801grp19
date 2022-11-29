@@ -25,7 +25,7 @@ public class RandomSourceCodeHandler extends AbstractSourceCodeHandler {
 
     int numFiles = srcFolder.list(filter).length;
     String fname = srcFolder.list(filter)[rand.nextInt(numFiles)];
-    File srcCode = new File(fname);
+    File srcCode = new File(SRC_CODE_PATH + fname);
     return srcCode;
   }
 

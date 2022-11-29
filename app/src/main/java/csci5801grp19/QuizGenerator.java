@@ -1,13 +1,8 @@
 package csci5801grp19;
 
-import java.io.*;
-import java.util.Random;
-
 public class QuizGenerator extends Component {
 
   private Quiz currQuiz;
-  private boolean canUseSavedProbs;
-  private double DATABASE_ODDS = 0.1;
 
   /**
    * Constructor for the component that generates quizzes.

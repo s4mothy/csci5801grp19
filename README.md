@@ -21,7 +21,7 @@ ordering,.py**
 
 This instructor wants to make a 10-question quiz called “September Midterm”. They will give a unique quiz to each of their 50 students to prevent cheating.  Because there are 10 questions in a quiz, this instructor needs 10 lines after the header. All questions are in the python language. The first 5 questions are multiple choice, the next 5 are ordering questions. 
 ## Using the System:
-The instructor boots the system up by opening their favorite terminal and cloning the code from github. Then proceed to the directory that contains the gradlew executable. 
+Once the instructor has a specs file, clone the code from this github. Then proceed to the directory that contains the gradlew executable. 
 To verify everything is working, run “gradlew clear” to remove previous builds. Use “./gradlew build” to generate a new set of files. Use “./gradlew test” to ensure every component is acting appropriately. Use “./gradlew run”,and wait as the system proceeds through the initial startup. Then enter the path to the specification file. The system can draw on previously generated problems, instead of creating new ones. Once each quiz is complete, it prints its title, and the series of generated problems assigned to it to the terminal, so the professor can capture them and offer them to their students. After the last quiz is generated, the system signs off and shuts down.
 ## Example Case for PPALMS System Usage:
 try using the system by passing the path of one of our example files located at **app\src\main\resources\quiz_input**

@@ -7,10 +7,10 @@ The PPALMS system works by using real examples of code to generate problems. Thi
 Using this software, the instructor can generate any quiz. In order to expedite user input, the exact specifications are put inside a special comma separated text file. 
 The first line of the specs doc is a header. It contains the number of questions per quiz, the number of quizzes to make, and the title of the quiz. Each subsequent line will describe one question. 
 
-**3,50,Friday Midterm  
+==3,50,Friday Midterm  
 multiple choice,.py  
 multiple choice,.c  
-ordering,.java**
+ordering,.java==
 
 This instructor wants to make a 10-question quiz called “September Midterm”. They will give a unique quiz to each of their 50 students to prevent cheating.  Because there are 10 questions in a quiz, this instructor needs 10 lines after the header. All questions are in the python language. The first 5 questions are multiple choice, the next 5 are ordering questions. 
 # Using the System:

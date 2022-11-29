@@ -37,14 +37,7 @@ public final class SystemFacade {
   }
 
   // primary method
-  public int getInput() {
-
-    // recieve path to specifications
-    Scanner inputReader = new Scanner(System.in);
-    System.out.println("Enter path to specification document: ");
-    String input = inputReader.nextLine();
-    System.out.println("path is: " + input);
-    inputReader.close();
+  public int getInput(String input) {
 
     // attempt to open file
     try {

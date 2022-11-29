@@ -1,4 +1,5 @@
 package csci5801grp19;
+import java.util.Scanner; 
 
 public class Main {
 
@@ -8,7 +9,14 @@ public class Main {
     System.out.println("Creating System Facade:");
     SystemFacade facade = SystemFacade.getInstance();
 
-    if (facade.getInput() != 0) {
+    // recieve path to specifications
+    Scanner inputReader = new Scanner(System.in);
+    System.out.println("Enter path to specification document: ");
+    String input = inputReader.nextLine();
+    System.out.println("path is: " + input);
+    inputReader.close();
+
+    if (facade.getInput(input) != 0) {
       System.out.println("error");
       return;
     }

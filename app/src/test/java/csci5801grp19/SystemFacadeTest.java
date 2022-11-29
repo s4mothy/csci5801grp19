@@ -13,42 +13,42 @@ public class SystemFacadeTest {
   @Test void fileEmpty() {
     SystemFacade facade = SystemFacade.getInstance();
     String path = System.getProperty("user.dir");
-    int response = facade.getInput(path + "\\src\\main\\resources\\quiz_input\\tests\\test1");
+    int response = facade.getInput(path + "/src/main/resources/quiz_input/tests/test1");
     assertEquals(2,response);
   }
 
   @Test void badHeader() {
     SystemFacade facade = SystemFacade.getInstance();
     String path = System.getProperty("user.dir");
-    int response = facade.getInput(path + "\\src\\main\\resources\\quiz_input\\tests\\test2");
+    int response = facade.getInput(path + "/src/main/resources/quiz_input/tests/test2");
     assertEquals(3,response);
   }
 
   @Test void badHeaderNumbers() {
     SystemFacade facade = SystemFacade.getInstance();
     String path = System.getProperty("user.dir");
-    int response = facade.getInput(path + "\\src\\main\\resources\\quiz_input\\tests\\test3");
+    int response = facade.getInput(path + "/src/main/resources/quiz_input/tests/test3");
     assertEquals(4,response);
   }
 
   @Test void tooFewQuestions() {
     SystemFacade facade = SystemFacade.getInstance();
     String path = System.getProperty("user.dir");
-    int response = facade.getInput(path + "\\src\\main\\resources\\quiz_input\\tests\\test4");
+    int response = facade.getInput(path + "/src/main/resources/quiz_input/tests/test4");
     assertEquals(5,response);
   }
 
   @Test void unsupportedType() {
     SystemFacade facade = SystemFacade.getInstance();
     String path = System.getProperty("user.dir");
-    int response = facade.getInput(path + "\\src\\main\\resources\\quiz_input\\tests\\test5");
+    int response = facade.getInput(path + "/src/main/resources/quiz_input/tests/test5");
     assertEquals(6,response);
   }
 
   @Test void unsupportedLanguage() {
     SystemFacade facade = SystemFacade.getInstance();
     String path = System.getProperty("user.dir");
-    int response = facade.getInput(path + "\\src\\main\\resources\\quiz_input\\tests\\test6");
+    int response = facade.getInput(path + "/src/main/resources/quiz_input/tests/test6");
     assertEquals(7,response);
   }
 

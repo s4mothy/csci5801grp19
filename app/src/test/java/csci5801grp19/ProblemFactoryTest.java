@@ -8,4 +8,5 @@ public class ProblemFactoryTest {
       File s = new File("app/src/main/resources/source_code");
       assertNotNull(ProblemFactory.createProblem("multiple choice", s), "createProblem should return a multiple choice problem.");
   }
+  
 }

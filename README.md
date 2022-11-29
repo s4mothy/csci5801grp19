@@ -1,9 +1,9 @@
-# CSCI 5801 GRP 19 
-Example Case for PPALMS System Usage 
+
+# Example Case for PPALMS System Usage 
 An instructor needs to generate many quizzes to allow their students to practice computer science. This PPALMS system will make it easy to generate hundreds of quizzes. 
-Source Code:
+# Source Code:
 The PPALMS system works by using real examples of code to generate problems. This also means the variety of problems generated depends on the amount of code the system draws from. In order to create healthy quizzes, it is important to keep a vast database of code within app\src\main\resources\source_code before quiz generation. 
-Specification File:
+# Specification File:
 Using this software, the instructor can generate any quiz. In order to expedite user input, the exact specifications are put inside a special comma separated text file. 
 The first line of the specs doc is a header. It contains the number of questions per quiz, the number of quizzes to make, and the title of the quiz. Each subsequent line will describe one question. 
 

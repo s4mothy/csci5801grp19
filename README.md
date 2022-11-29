@@ -30,6 +30,6 @@ Once each quiz is complete, it prints its title, and the series of generated pro
 ## Example Case for PPALMS System Usage:
 try using the system by passing the path of one of our example files located at **app\src\main\resources\quiz_input**
 ## Testing
-In order to run our test cases, type “./gradlew test” in the terminal with csci5801grp19 as your working directory. The tests are located at **csci5801grp19\app\src\test\java\csci5801grp19**. The test reports can be found at **csci5801grp19\app\build\reports\tests\test**.
+In order to run our test cases, type “./gradlew test” in the terminal with csci5801grp19 as your working directory. The tests are located at **csci5801grp19\app\src\test\java\csci5801grp19**. The test reports can be found at **csci5801grp19\app\build\reports\tests\test\index**.
 ## Future Features:
 Although an export file is not supplied currently, as the system is still new, the quizzes are exported to the terminal, so the instructors can redirect the stream to a file. The system is extremely close to having an exported document option, so this inconvenience should not last long. The instructor may soon be able to alter the config value for the rate of reuse to 100%, if enough generated problems exist to avoid the problems’ overuse. More problem types are expected to come, to further expand the options available for learning. 

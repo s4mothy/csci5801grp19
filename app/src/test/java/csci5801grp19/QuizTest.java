@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class QuizTest {
 File s = new File("app/src/main/resources/source_code");
   Quiz quiz = new Quiz("Quiz is multiple choice, with a time limit of 20 minutes.");
-  @Test void QuizExists() {
+  @Test void QuizHasConstructor() {
     Quiz testQuiz = new Quiz("Quiz is multiple choice, with a time limit of 20 minutes.");
     assertTrue(testQuiz instanceof Quiz);
   }

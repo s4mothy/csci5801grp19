@@ -30,7 +30,7 @@ public class Main {
     System.out.println("Generating quizzes...");
     for (int i = 0; i < SystemFacade.num_quizzes; i++) {
       newMed.reactOnQZGen("GenerateQuiz");
-      ;
     }
+    System.out.println("Quiz generation complete.");
   }
 }

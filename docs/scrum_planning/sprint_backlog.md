@@ -49,7 +49,6 @@
   - [ ] Completed
 - Description: Gather examples of fil-in-the-blank problems the system should handle. Done when samples are gathered and analyzed.
 
-
 ### Task 2.2: Designing Algorithm for Generating Fill-In-The-Blank Problems ###
 
 - Owner: Daniel Swarts
@@ -103,7 +102,7 @@
 
 - Owner: Samuel Williams
 - Status:
-  - [x] Not Started
+  - [x] Not Starteds
   - [ ] In-Progress
   - [ ] Completed
 - Description: Handle transfer of quiz file information to a quiz text document. Done when a successful run of the system generates a quiz document containing generated problems.

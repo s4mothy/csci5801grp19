@@ -3,6 +3,12 @@ Project: CSCI 5801 P5
 Attendance: Sam, Daniel, Farhan, Jack (all)
 Minutes Author: Jack Sellner
 
+Meeting Roles:
+- Scrum Master: Sam Williams
+- Developer: Farahan Idris
+- Developer: Jackson Sellner
+- Developer: Daniel Swarts
+
 Went over and produced a product backlog
 	-See file in scrub planning folder
 	-Selected a bunch of different areas the current prototype can be improved

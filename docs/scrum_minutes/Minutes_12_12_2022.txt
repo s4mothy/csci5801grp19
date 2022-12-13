@@ -1,0 +1,15 @@
+Date: 12/12/2022
+Project: CSCI 5801 P5
+Attendance: Sam Williams, Daniel Swarts, Jack Sellner
+Minutes Author: Jack Sellner
+
+Meeting Roles:
+- Scrum Master: Daniel Swarts
+- Developer: Farahan Idris
+- Developer: Jackson Sellner
+- Developer: Sam Williams
+
+Move 1.1, 1.4 2.1, and 5.1
+	-Tasks labeled by item they are associated with
+	-Developers are Jack, Farhan, Daniel, and Sam, respectively
+Meeting 12/13/2022 @ ~7pm

@@ -6,8 +6,8 @@
 
 - Owner: Jackson Sellner
 - Status:
-  - [x] Not Started
-  - [ ] In-Progress
+  - [ ] Not Started
+  - [x] In-Progress
   - [ ] Completed
 - Description: Gather examples of multiple choice problems the system should handle. Done when samples are gathered and analyzed.
 
@@ -31,10 +31,10 @@
 
 ### Task 1.4: Updating System to Handle Multiple Choice Problem Requests ###
 
-- Owner: Jackson Sellner
+- Owner: Farahan Idris
 - Status:
-  - [x] Not Started
-  - [ ] In-Progress
+  - [ ] Not Started
+  - [x] In-Progress
   - [ ] Completed
 - Description: Update system to handle new multiple choice problem type. Done when a quiz document requesting multiple choice problems has been generated and shown to correctly generate a quiz document.
 
@@ -44,8 +44,8 @@
 
 - Owner: Daniel Swarts
 - Status:
-  - [x] Not Started
-  - [ ] In-Progress
+  - [ ] Not Started
+  - [x] In-Progress
   - [ ] Completed
 - Description: Gather examples of fil-in-the-blank problems the system should handle. Done when samples are gathered and analyzed.
 
@@ -102,8 +102,8 @@
 
 - Owner: Samuel Williams
 - Status:
-  - [x] Not Starteds
-  - [ ] In-Progress
+  - [ ] Not Starteds
+  - [x] In-Progress
   - [ ] Completed
 - Description: Handle transfer of quiz file information to a quiz text document. Done when a successful run of the system generates a quiz document containing generated problems.
 

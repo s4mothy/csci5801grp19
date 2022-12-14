@@ -28,7 +28,7 @@ public class FillBlankProblem extends AbstractProblem {
     public String[] python_bitwise = {"&","|","^","~","<<",">>"};
 
     /**
-     * @breif Constructor 
+     * @brief Constructor 
      * @param lang is the language of the source code.
      * 
      * @return instance of this class

@@ -43,6 +43,9 @@ public class QuizGenerator extends Component {
       if (currType.equals("ordering")) {
         this.dialog.notify(this, "GenOrderProb");
       }
+      if (currType.equals("fill blank")) {
+        this.dialog.notify(this, "GenFBProb");
+      }
     }
 
     this.dialog.notify(this, "ExportQuiz");

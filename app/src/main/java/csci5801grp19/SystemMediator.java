@@ -125,7 +125,7 @@ public class SystemMediator implements Mediator {
 
     if (event.equals("ExportQuiz")) {
       // TEMPORARY USE AS MEANS TO PRINT PROBLEMS
-      System.out.println(qzGen.getQuiz());
+      qzExport.exportQuiz(qzGen.getQuiz());
       return;
     }
   }

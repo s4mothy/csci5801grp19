@@ -28,7 +28,7 @@ public class FillBlankProblem extends AbstractProblem {
     public String[] python_bitwise = {"&","|","^","~","<<",">>"};
 
     /**
-     * @breif Constructor 
+     * @brief Constructor 
      * @param lang is the language of the source code.
      * 
      * @return instance of this class
@@ -44,7 +44,10 @@ public class FillBlankProblem extends AbstractProblem {
      * @brief This is the main workhorse of this class. Populates the class variables
      * with a proper, finished problem bassed on the specifications.
      * @param filePath path to source code
-     * @param type determines which type of keyword or operator to replace with a blank.
+     * @param type determines which type of keyword or operator to replace with a blank. 
+     * 0 for keyword, 1 for arithmetic operator, 2 for assignment operator, 3 for 
+     * comparison operator, 4 for bitwise operator.
+     * @param num unimplemented. 
      * 
      * @return error code (0 if no issues)
      */
@@ -65,6 +68,16 @@ public class FillBlankProblem extends AbstractProblem {
             return 1;
         }
 
+        // get a prediction of how many of each keyword is in the file.
+        int[] specs = getFileSpecs(myFile);
+
+        //generate random value from 0 to length of list
+        Random rand = new Random();
+        int upperbound = specs.length;
+        int int_random = rand.nextInt(upperbound); 
+        this.solution += int_random;
+        int i = 0;
+
         String[] tokens;
         
 
@@ -84,6 +97,18 @@ public class FillBlankProblem extends AbstractProblem {
                     // ignore comments
                     if (category == 0) {
                         break;
+                    }
+
+                    else if ((category - 1) == type){
+                        if (i == int_random){
+                            this.question += "_____";
+                            this.solution += "\n" + token;
+                        }
+                        else {
+                            this.question += token;
+                        }
+
+                        i++;
                     }
     
                     // handle keywords
@@ -217,18 +242,72 @@ public class FillBlankProblem extends AbstractProblem {
     }
 
     /**
-     * Returns String of problem, which consist of three blocks of text;
+     * @brief string form of question.
+     * 
+     * @return Returns String of problem, which consist of three blocks of text;
      * question on top, options in middle, solution bottom.
      */
     public String toString() {
         String str = question;
         str += '\n';
-        str += options;
-        str += '\n';
         str += solution;
         str += '\n';
 
         return str;
+    }
+
+    /**
+     * @brief gets number of keywords in file
+     * @param fileReader is the Scanner which can read the file
+     * 
+     * @return error code. 0 if no errors.
+     */
+    public int[] getFileSpecs(File myFile) {
+        int[] result = {0,0,0,0,0,0};
+        String[] tokens;
+        Scanner fileReader;
+
+        // attempt to open file
+        try {
+            fileReader = new Scanner(myFile);
+        }
+
+        // file not found exception:
+        catch (FileNotFoundException e) {
+            System.out.println("Could not find File.");
+            e.printStackTrace();
+            return result;
+        }
+
+
+
+        while (fileReader.hasNextLine()) {
+            // read and tokenize the header (first line)
+            tokens = fileReader.nextLine().split(" ");
+
+            // ignore line that begin with a comment, or are whitespace
+            if(tokens[0] != "#" && (tokens.length > 2)){
+                
+                for (String token : tokens) {
+
+                    // read categorizeToken for more info
+                    int category = categorizeToken(token);
+
+                    // ignore comments
+                    if (category == 0) {
+                        break;
+                    }
+    
+                    else {
+                        category--;
+                        result[category]++;
+                    }
+                }
+            }
+        }
+
+        fileReader.close();
+        return result;
     }
 
 }

@@ -25,6 +25,9 @@ public class ProblemFactory {
     if (pType.equals("multiple choice")) {
       return new MultChcProblem(sc);
     }
+    if (pType.equals("fill blank")) {
+      return new FillBlankProblem(sc);
+    }
     return null;
   }
 

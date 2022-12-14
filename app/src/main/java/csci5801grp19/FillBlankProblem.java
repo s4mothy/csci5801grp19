@@ -7,11 +7,6 @@ import java.io.FileNotFoundException;
 
 public class FillBlankProblem extends AbstractProblem {
 
-    protected String question;
-    protected String options;
-    protected String solution;
-    protected String langEx;
-
     public String[] python_keywords = { "and", "as", "assert", "break",
             "class", "continue", "def", "del", "elif", "else", "except",
             "False", "finally", "for", "from", "global", "if", "import",
@@ -33,8 +28,8 @@ public class FillBlankProblem extends AbstractProblem {
      * 
      * @return instance of this class
      */
-    public FillBlankProblem(String lang) {
-        this.langEx = lang;
+    public FillBlankProblem(File sc) {
+        this.langEx = "." + sc.getName().split("\\.")[2];
         this.question = "question:";
         this.options = "options:";
         this.solution = "solution:";

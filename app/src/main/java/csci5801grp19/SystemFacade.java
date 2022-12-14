@@ -133,8 +133,7 @@ public final class SystemFacade {
       return true;
     } else if (type.equals("multiple choice")) {
       return true;
-    }
-    if (type.equals("fill blank")){
+    } else if (type.equals("fill blank")){
       return true;
     }
     // TODO: add more problem types

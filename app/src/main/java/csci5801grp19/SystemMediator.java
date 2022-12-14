@@ -103,25 +103,25 @@ public class SystemMediator implements Mediator {
     }
 
     if (event.equals("GenMCProb")) {
-      AbstractProblem newMultChcProb = ProblemFactory.createProblem("multiple choice",
+      AbstractProblem newProb = ProblemFactory.createProblem("multiple choice",
           this.sHandler.ingestNewSC(".py"));
-      qzGen.getQuiz().getQuestions().add(newMultChcProb);
-      pHandler.storeProbInDB(newMultChcProb);
+      qzGen.getQuiz().getQuestions().add(newProb);
+      pHandler.storeProbInDB(newProb);
       return;
     }
 
     if (event.equals("GenOrderProb")) {
-      AbstractProblem newOrderingProb = ProblemFactory.createProblem("ordering",
+      AbstractProblem newProb = ProblemFactory.createProblem("ordering",
           this.sHandler.ingestNewSC(".py"));
-      qzGen.getQuiz().getQuestions().add(newOrderingProb);
-      pHandler.storeProbInDB(newOrderingProb);
+      qzGen.getQuiz().getQuestions().add(newProb);
+      pHandler.storeProbInDB(newProb);
       return;
     }
     if (event.equals("GenFBProb")) {
-      AbstractProblem newMultChcProb = ProblemFactory.createProblem("multiple choice",
+      AbstractProblem newProb = ProblemFactory.createProblem("fill blank",
           this.sHandler.ingestNewSC(".py"));
-      qzGen.getQuiz().getQuestions().add(newMultChcProb);
-      pHandler.storeProbInDB(newMultChcProb);
+      qzGen.getQuiz().getQuestions().add(newProb);
+      pHandler.storeProbInDB(newProb);
       return;
     }
 

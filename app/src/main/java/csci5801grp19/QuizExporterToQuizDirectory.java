@@ -28,11 +28,11 @@ public class QuizExporterToQuizDirectory extends AbstractQuizExporter {
     try {
       File expFile = new File(export_fname);
       // If file already exists, deletes and makes new.
-      if (!expFile.createNewFile()) {
+      if (expFile.exists()) {
         System.out.println("Deleting old quiz file...");
         expFile.delete();
-        expFile.createNewFile();
       } 
+      expFile.createNewFile();
       System.out.println("Quiz export file generated: " + expFile.getName());
       FileWriter expWriter = new FileWriter(expFile);
       expWriter.write(currQuiz.toString());

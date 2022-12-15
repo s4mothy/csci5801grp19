@@ -5,9 +5,9 @@ num = 29
 
 flag = False 
 
-_____ num > 1: 
+if num > 1: 
     
-    for i in range(2, num): 
+    for i _____ range(2, num): 
         if (num % i) == 0: 
             
             flag = True 
@@ -17,5 +17,5 @@ _____ num > 1:
     print(num, "is not a prime number") 
     print(num, "is a prime number") 
 
-solution:1
-if
+solution:3
+in

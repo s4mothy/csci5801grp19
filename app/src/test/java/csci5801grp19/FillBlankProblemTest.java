@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
 
 public class FillBlankProblemTest {
     @Test
@@ -107,10 +105,9 @@ public class FillBlankProblemTest {
 
     @Test
     void toStringTest() {
-        FillBlankProblem p = new FillBlankProblem("python");
         String filePath = "src\\main\\resources\\source_code\\test_source_code\\primeNumber.py";
         File myFile = new File(filePath);
-        p.makeProblem(myFile, 0);
+        FillBlankProblem p = new FillBlankProblem(myFile);
         int result = p.writeOutput("src\\main\\resources\\source_code\\test_source_code\\output.py");
         assertEquals(0, result);
     }

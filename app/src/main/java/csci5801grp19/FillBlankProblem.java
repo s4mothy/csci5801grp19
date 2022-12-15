@@ -22,25 +22,48 @@ public class FillBlankProblem extends AbstractProblem {
 
     public String[] python_bitwise = {"&","|","^","~","<<",">>"};
 
+    
     /**
      * @brief Constructor 
-     * @param lang is the language of the source code.
+     * @param myFile is the opened source code file
+     * @param type is the type of keyword to replace
      * 
      * @return instance of this class
      */
-    public FillBlankProblem(File sc) {
-        this.langEx = "." + sc.getName().split("\\.")[2];
-        this.question = "question:";
-        this.options = "options:";
-        this.solution = "solution:";
-    }
-
-    public FillBlankProblem(String lang,File myFile, int type){
-        this.langEx = lang;
+    public FillBlankProblem(File myFile, int type){
+        this.langEx = "." + myFile.getName().split("\\.")[1];
         this.question = "question:";
         this.options = "options:";
         this.solution = "solution:";
         this.makeProblem(myFile,type);
+    }
+
+    /**
+     * @brief default Constructor (doesn't specify type, default = 0)
+     * @param myFile is the opened source code file
+     * 
+     * @return instance of this class
+     */
+    public FillBlankProblem(File myFile){
+        this.langEx = "." + myFile.getName().split("\\.")[1];
+        this.question = "question:";
+        this.options = "options:";
+        this.solution = "solution:";
+        this.makeProblem(myFile,0);
+    }
+
+    /**
+     * @brief null Constructor (doesn't make problem on its own, used 
+     * for debugging)
+     * @param lang is the language of the problem
+     * 
+     * @return instance of this class
+     */
+    public FillBlankProblem(String lang){
+        this.langEx = lang;
+        this.question = "question:";
+        this.options = "options:";
+        this.solution = "solution:";
     }
 
     /**

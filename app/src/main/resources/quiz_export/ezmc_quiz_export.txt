@@ -1,0 +1,21 @@
+Easy Quiz!
+================================================================
+QUESTION: 
+Below, a line has been selected and mutated into 3 incorrect versions. Pick the original (correct) line of code. Ensure that it is logically consistent with the intended output
+______
+b = a
+c = b
+print(c)
+
+OPTIONS: 
+a = 0
+a |= 0
+a **= 0
+a -= 0
+
+SOLUTION: 
+a = 0
+b = a
+c = b
+print(c)
+================================================================

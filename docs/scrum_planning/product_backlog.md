@@ -65,3 +65,9 @@
 - As a: Instructor
 - I want to: be able to have the system identify integers when parsing source code during problem generation.
 - So that: I can create problems where changes in an integers value are part of its generation.
+
+## Item 15: Vertical Bar Not Handled Correctly in Multiple Choice Generation ##
+
+- As a: Instructor
+- I want to: use bitwise or operations in my problems.
+- So that: my students can be tested on its use.

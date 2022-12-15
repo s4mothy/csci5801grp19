@@ -281,36 +281,6 @@ public class FillBlankProblem extends AbstractProblem {
     }
 
     /**
-     * @brief bassed on specifications, will change the answer and options to make
-     * a convincing problem.
-     * @param word is the token which is being replaced with a blank.
-     * @param type is the type of keyword to replace.
-     * @param numOptions is the number of options to give to the student.
-     * 
-     * @return error code. 0 for no errors.
-     */
-    public int setSolution(String word, int type, int numOptions){
-        this.solution += "\n" + word;
-
-        // compile a list of every kind of word in python
-        String[][] python_categories = {this.python_keywords,
-            this.python_arithmetic,this.python_assignment,
-            this.python_comparison,this.python_bitwise};
-
-        String[] category = python_categories[type];
-
-        for (int i = 0; i < numOptions; i++){
-            //generate random value from 0 to length of list
-            Random rand = new Random();
-            int upperbound = category.length;
-            int int_random = rand.nextInt(upperbound); 
-
-            this.options += "\n" + category[int_random];
-        }
-        return 0;
-    }
-
-    /**
      * @brief string form of question.
      * 
      * @return Returns String of problem, which consist of three blocks of text;

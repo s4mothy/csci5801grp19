@@ -7,16 +7,16 @@ flag = False
 
 if num > 1: 
     
-    for i in range(2, num): 
+    _____ i in range(2, num): 
         if (num % i) == 0: 
             
             flag = True 
             
-            _____ 
+            break 
 
 if flag: 
     print(num, "is not a prime number") 
     print(num, "is a prime number") 
 
-solution:6
-break
+solution:2
+for

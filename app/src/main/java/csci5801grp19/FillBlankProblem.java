@@ -40,24 +40,29 @@ public class FillBlankProblem extends AbstractProblem {
         this.solution = "solution:";
     }
 
+    public FillBlankProblem(String lang,File myFile, int type){
+        this.langEx = lang;
+        this.question = "question:";
+        this.options = "options:";
+        this.solution = "solution:";
+        this.makeProblem(myFile,type);
+    }
+
     /**
      * @brief This is the main workhorse of this class. Populates the class variables
      * with a proper, finished problem bassed on the specifications.
-     * @param filePath path to source code
+     * @param myFile the opened source code file
      * @param type determines which type of keyword or operator to replace with a blank. 
      * 0 for keyword, 1 for arithmetic operator, 2 for assignment operator, 3 for 
      * comparison operator, 4 for bitwise operator.
-     * @param num unimplemented. 
      * 
      * @return error code (0 if no issues)
      */
-    public int makeProblem(String filePath, int type, int num) {
-        File myFile;
+    public int makeProblem(File myFile, int type) {
         Scanner fileReader;
 
-        // attempt to open file
+        // attempt to scan file
         try {
-            myFile = new File(filePath);
             fileReader = new Scanner(myFile);
         }
 

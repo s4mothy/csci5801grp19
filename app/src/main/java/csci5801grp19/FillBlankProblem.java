@@ -296,11 +296,12 @@ public class FillBlankProblem extends AbstractProblem {
      *         question on top, options in middle, solution bottom.
      */
     public String toString() {
-        String str = question;
-        str += '\n';
-        str += solution;
-        str += '\n';
-        return str;
+      String str = "QUESTION: \n";
+      str += this.question + "\n";
+      str += "SOLUTION: \n";
+      str += this.solution + "\n";
+  
+      return str;
     }
 
     /**

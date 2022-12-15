@@ -17,3 +17,4 @@ Items 1, 2, and 5 are removed, as they are completed. Item 3 has returned to the
 - Item 12: Problem Rework for Consistent Implementations
 - Item 13: Extending Language Tables and Handling Within Problem Classes to Additional Languages
 - Item 14: Integer Recognition for Problems
+- Item 15: Vertical Bar Not Handled Correctly in Multiple Choice Generation

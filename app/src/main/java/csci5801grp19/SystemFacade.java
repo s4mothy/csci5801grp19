@@ -10,6 +10,8 @@ public final class SystemFacade {
   // variables:
   // a reference to itself, as a singleton class
   private static volatile SystemFacade INSTANCE = null;
+  // Reference to quiz document file name for Quiz Exporter
+  public static String qz_fname;
   // Title of the quiz
   public static String title;
   // Number of distinct versions of the quiz
@@ -46,6 +48,10 @@ public final class SystemFacade {
 
       // parse the specifications
       int i = readSpecs(fileReader);
+
+      // if parsed, set file name for quiz document
+      qz_fname = myFile.getName().split("\\.", 2)[0];
+
       fileReader.close();
       return i;
     }
@@ -126,6 +132,8 @@ public final class SystemFacade {
     if (type.equals("ordering")) {
       return true;
     } else if (type.equals("multiple choice")) {
+      return true;
+    } else if (type.equals("fill blank")){
       return true;
     }
     // TODO: add more problem types

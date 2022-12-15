@@ -51,14 +51,18 @@ public abstract class AbstractProblem implements Serializable {
    * question on top, options in middle, solution bottom.
    */
   public String toString() {
-    String str = question;
-    str += '\n';
-    str += options;
-    str += '\n';
-    str += solution;
-    str += '\n';
+    String str = "QUESTION: \n";
+    str += this.question + "\n";
+    str += "OPTIONS: \n";
+    str += this.options + "\n";
+    str += "SOLUTION: \n";
+    str += this.solution + "\n";
 
     return str;
+  }
+
+  public String hello(){
+    return "hello";
   }
 
 }

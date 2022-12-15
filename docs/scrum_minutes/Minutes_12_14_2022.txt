@@ -1,0 +1,16 @@
+Date: 12/14/2022
+Project: CSCI 5801 P5
+Attendance: Sam Williams, Daniel Swarts, Jack Sellner, Farhan Idris
+Minutes Author: Sam Williams
+
+Meeting Roles:
+- Scrum Master: Farahan Idris
+- Developer: Jackson Sellner
+- Developer: Daniel Swarts
+- Developer: Sam Williams
+
+
+Item 1 complete, Item 2 complete, Item 5 complete.
+Item 3 considered needs additional time;
+3.1 remain on sprint_backlog, 3.2 returns with need for re-evaluate.
+

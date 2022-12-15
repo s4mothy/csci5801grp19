@@ -4,6 +4,8 @@ import java.util.*;
 
 public class Quiz {
 
+  private String BUFFER = "================================================================\n";
+
   private List<AbstractProblem> questions;
   private String quizInfo;
 
@@ -43,8 +45,10 @@ public class Quiz {
   public String toString() {
     String str = quizInfo;
     str += "\n";
+    str += BUFFER;
     for (int i = 0; i < questions.size(); i++) {
       str += questions.get(i).toString();
+      str += BUFFER;
     }
     return str;
   }

@@ -1,4 +1,5 @@
 a = 0
 b = a
+x = b < a
 c = b
-print (c)
+if (x) : print(c)

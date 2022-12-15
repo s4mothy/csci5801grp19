@@ -1,0 +1,19 @@
+Date: 12/13/2022
+Project: CSCI 5801 P5
+Attendance: Sam Williams, Daniel Swarts, Jack Sellner, Farhan Idris
+Minutes Author: Jack Sellner
+
+Meeting Roles:
+- Scrum Master: Jackson Sellner
+- Developer: Farahan Idris
+- Developer: Daniel Swarts
+- Developer: Sam Williams
+
+
+Move 1.1->1.2, 1.4, 2.1->2.3, and 5.1
+	-Arrows represent task progression with form original.x->currentState.x
+	-No arrows mean task/subtask not fully completed
+	-Tasks labeled by item they are associated with
+	-Developers are Jack, Farhan, Daniel, and Sam, respectively
+
+Meeting 12/14/2022 @ ~7pm

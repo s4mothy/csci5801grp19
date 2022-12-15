@@ -1,6 +1,5 @@
 package csci5801grp19;
 
-import org.checkerframework.checker.lock.qual.MayReleaseLocks;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,7 +18,7 @@ public class FillBlankProblemTest {
         FillBlankProblem p = new FillBlankProblem("python");
         String filePath = "not a real path";
         File myFile = new File(filePath);
-        int result = p.makeProblem(myFile, 0);
+        int result = p.makeProblem(myFile, 0,true);
         assertEquals(1, result);
     }
 
@@ -28,7 +27,7 @@ public class FillBlankProblemTest {
         FillBlankProblem p = new FillBlankProblem("python");
         String filePath = "src\\main\\resources\\source_code\\test_source_code\\primeNumber.py";
         File myFile = new File(filePath);
-        int result = p.makeProblem(myFile, 0);
+        int result = p.makeProblem(myFile, 0,true);
         assertEquals(0, result);
     }
 
@@ -104,11 +103,20 @@ public class FillBlankProblemTest {
     }
 
     @Test
+    void toStringDebug() {
+        String filePath = "src\\main\\resources\\source_code\\test_source_code\\primeNumber.py";
+        File myFile = new File(filePath);
+        FillBlankProblem p = new FillBlankProblem(myFile,0,true);
+        int result = p.writeOutput("src\\main\\resources\\source_code\\test_source_code\\output.py");
+        assertEquals(0, result);
+    }
+
+    @Test
     void toStringTest() {
         String filePath = "src\\main\\resources\\source_code\\test_source_code\\primeNumber.py";
         File myFile = new File(filePath);
-        FillBlankProblem p = new FillBlankProblem(myFile);
-        int result = p.writeOutput("src\\main\\resources\\source_code\\test_source_code\\output.py");
+        FillBlankProblem p = new FillBlankProblem(myFile,0,false);
+        int result = p.writeOutput("src\\main\\resources\\source_code\\test_source_code\\output2.py");
         assertEquals(0, result);
     }
 }

@@ -56,7 +56,7 @@ public abstract class AbstractProblem implements Serializable {
     str += "OPTIONS: \n";
     str += this.options + "\n";
     str += "SOLUTION: \n";
-    str += this.solution;
+    str += this.solution + "\n";
 
     return str;
   }

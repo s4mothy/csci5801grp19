@@ -1,2 +1,0 @@
-1,1,Easy Quiz!
-multiple choice,.py

@@ -115,7 +115,7 @@ public class FillBlankProblemTest {
     void toStringTest() {
         String filePath = "src\\main\\resources\\source_code\\test_source_code\\primeNumber.py";
         File myFile = new File(filePath);
-        FillBlankProblem p = new FillBlankProblem(myFile,0,false);
+        FillBlankProblem p = new FillBlankProblem(myFile);
         int result = p.writeOutput("src\\main\\resources\\source_code\\test_source_code\\output2.py");
         assertEquals(0, result);
     }

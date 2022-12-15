@@ -53,6 +53,9 @@ public abstract class AbstractProblemDatabaseHandler extends Component {
     if (type.equals("ordering")) {
       ptVal = "T02";
     }
+    if (type.equals("fill blank")) {
+      ptVal = "T03";
+    }
 
     File prbFolder = new File(STORED_PROB_PATH);
     final String tmp = ptVal;
@@ -84,6 +87,9 @@ public abstract class AbstractProblemDatabaseHandler extends Component {
     }
     if (prob instanceof OrderingProblem) {
       ptVal = "T02";
+    }
+    if (prob instanceof FillBlankProblem) {
+      ptVal = "T03";
     }
 
     File prbFolder = new File(STORED_PROB_PATH);
